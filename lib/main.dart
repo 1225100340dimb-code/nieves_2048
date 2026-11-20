@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'presentation/juego_screen.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const Nieves2048App());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class Nieves2048App extends StatelessWidget {
+  const Nieves2048App({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      title: 'Nieves 2048',
+      theme: ThemeData(primarySwatch: Colors.pink, useMaterial3: true),
+      home: const JuegoScreen(),
     );
   }
 }
